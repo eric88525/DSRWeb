@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectTableComponent } from './project-table/project-table.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +21,15 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     SearchComponent,
     LoginComponent,
-    TopHeaderComponent
+    TopHeaderComponent,
+    ProjectTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
