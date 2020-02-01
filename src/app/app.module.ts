@@ -9,7 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { TopHeaderComponent } from './top-header/top-header.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +22,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
