@@ -18,6 +18,6 @@ export class ProjectTableComponent implements OnInit {
     // alert(this.projects);
   }
   ngOnInit() {
-    this.getProjects();
+
   }
 }
