@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="popular_property">
   <div class="container">
       <div class="row">
@@ -9,26 +8,26 @@
           </div>
       </div>
       <div class="row">
-        <ng-container *ngFor="let project of projects">
+        <ng-container *ngFor = "let project of projects">
           <div class="col-xl-4 col-md-6 col-lg-4">
               <div class="single_property">
                   <div class="property_thumb">
-                      <div class="property_tag">
+                      <!-- <div class="property_tag">
                               For Sale
-                      </div>
-                      <img src="img/property/1.png" alt="">
+                      </div> -->
+                      <img src="http://localhost/images/2898300.jpg" alt="">
                   </div>
                   <div class="property_content">
                       <div class="main_pro">
-                              <h3><a href="#">Comfortable Apartment in Palace</a></h3>
+                              <h3><a href="#">{{project.programName}}</a></h3>
                               <div class="mark_pro">
                                   <img src="img/svg_icon/location.svg" alt="">
-                                  <span>Popular Properties</span>
+                                  <span>{{project.opportunity}}</span>
                               </div>
-                              <span class="amount">From $20k</span>
+                              <span class="amount">Details</span>
                       </div>
                   </div>
-                  <div class="footer_pro">
+                  <!-- <div class="footer_pro">
                           <ul>
                               <li>
                                   <div class="single_info_doc">
@@ -49,7 +48,7 @@
                                   </div>
                               </li>
                           </ul>
-                      </div>
+                      </div> -->
               </div>
           </div>
         </ng-container>

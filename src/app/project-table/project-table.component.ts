@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectService} from '../project.service';
 import {Project} from '../project';
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-project-table',
   templateUrl: './project-table.component.html',
@@ -8,15 +9,9 @@ import {Project} from '../project';
 })
 
 export class ProjectTableComponent implements OnInit {
+  @Input() projects: Project[];
+  constructor() { }
 
-  constructor(private projectService: ProjectService) { }
-  projects: Project[];
-  getProjects() {
-    this.projectService.getProjects().subscribe(
-      (data: Project[]) => this.projects = data
-    );
-    // alert(this.projects);
-  }
   ngOnInit() {
 
   }

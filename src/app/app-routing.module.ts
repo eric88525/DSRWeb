@@ -9,7 +9,6 @@ import { ProjectTableComponent } from './project-table/project-table.component';
 const routes: Routes = [
   {path: '', component: SearchComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'result', component: ProjectTableComponent},
 ];
 
 @NgModule({

@@ -14,19 +14,19 @@
                 <div class="col-xl-12">
                   <div class="form_wrap d-flex">
                     <div class="single-field min_width ">
-                      <label for="#">Customer</label>
+                      <label for="#">Program Name</label>
+                      <input type="text" [(ngModel)]="search.programName" name="programName">
+                    </div>
+                    <div class="single-field min_width ">
+                      <label for="#">Part Number</label>
+                      <input type="text" [(ngModel)]="search.partNumber" name="partNumber">
+                    </div>
+                    <div class="single-field min_width ">
+                      <label for="#">xxx</label>
                       <input>
                     </div>
                     <div class="single-field min_width ">
-                      <label for="#">Sales</label>
-                      <input>
-                    </div>
-                    <div class="single-field min_width ">
-                      <label for="#">Project Name</label>
-                      <input>
-                    </div>
-                    <div class="single-field min_width ">
-                      <label for="#">Number</label>
+                      <label for="#">xxx</label>
                       <input>
                     </div>
                     <div class="serach_icon">
@@ -47,3 +47,6 @@
   </div>
 </div>
 <!-- slider_area_end -->
+<ng-container *ngIf=result.length>
+<app-project-table [projects]=result></app-project-table>
+</ng-container>
