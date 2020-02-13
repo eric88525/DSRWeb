@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ProjectService} from '../project.service';
 import {Project} from '../project';
 import { Input } from '@angular/core';
 @Component({
@@ -11,7 +10,6 @@ import { Input } from '@angular/core';
 export class ProjectTableComponent implements OnInit {
   @Input() projects: Project[];
   constructor() { }
-
   ngOnInit() {
 
   }

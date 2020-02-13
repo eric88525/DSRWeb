@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
-import { TopHeaderComponent } from './top-header/top-header.component';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectTableComponent } from './project-table/project-table.component';
@@ -21,7 +21,6 @@ import { ProjectTableComponent } from './project-table/project-table.component';
     HeaderComponent,
     SearchComponent,
     LoginComponent,
-    TopHeaderComponent,
     ProjectTableComponent
   ],
   imports: [

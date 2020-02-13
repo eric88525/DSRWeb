@@ -7,7 +7,8 @@ import { ProjectTableComponent } from './project-table/project-table.component';
 
 
 const routes: Routes = [
-  {path: '', component: SearchComponent},
+  {path: '',   redirectTo: 'main', pathMatch: 'full'},
+  {path: 'main', component: SearchComponent},
   {path: 'login', component: LoginComponent},
 ];
 
