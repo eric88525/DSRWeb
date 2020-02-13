@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   Login() {
     this.memberService.Login(this.user).subscribe((data: any) => {
       if (data.token) {
-        localStorage.setItem('token', data.token);
+        sessionStorage.setItem('token', data.token);
         this.router.navigate(['/']);
       } else {
         console.log('fail');
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem('token') != null){
+    if (sessionStorage.getItem('token') != null) {
       this.memberService.Logout();
     }
   }

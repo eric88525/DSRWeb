@@ -22,11 +22,11 @@ export class HeaderComponent implements OnInit {
     this.memberService.whoami().subscribe(
       (data: any) => {
         console.log(data);
-        if (data.email && data.name) {
+        if (data.user) {
           this.hasLogin = true;
-          this.me.name = data.name;
-          this.me.email = data.namemaile;
-          this.me.level = data.level;
+          this.me.name = data.user.name;
+          this.me.email = data.user.namemaile;
+          this.me.level = data.user.level;
           console.log('data good');
         } else if (data.error) {
           this.hasLogin = false;

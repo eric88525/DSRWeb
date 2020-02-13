@@ -19,25 +19,22 @@ export class MemberService {
   }
   whoami() {
     console.log('who am i');
-    console.log(localStorage.getItem('token'));
+    console.log(sessionStorage.getItem('token'));
     return this.httpClient.get(this.Url + 'me', {
       headers: {
-        Authorization: localStorage.getItem('token')
+        Authorization: sessionStorage.getItem('token')
       }
     });
-   /* console.log('try to get me');
-    this.body.token = localStorage.getItem('token');
-    return this.httpClient.post(this.Url + 'me', this.body);*/
   }
   Logout() {
     console.log('logout:');
-    console.log(localStorage.getItem('token'));
+    console.log(sessionStorage.getItem('token'));
     this.httpClient.get(this.Url + 'logout', {
       headers: {
-        Authorization: localStorage.getItem('token')
+        Authorization: sessionStorage.getItem('token')
       }
     });
-    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
     location.reload();
   }
 

@@ -14,10 +14,18 @@ export class ProjectService {
 
   getProjects() {
     console.log('get pjs');
-    return this.http.get(this.Url + 'projects');
+    return this.http.get(this.Url + 'projects', {
+      headers: {
+        Authorization: sessionStorage.getItem('token')
+      }
+    });
   }
   searchProjects(project) {
-    return this.http.post(this.Url + 'search', project);
+    return this.http.post(this.Url + 'search', project, {
+      headers: {
+        Authorization: sessionStorage.getItem('token')
+      }
+    });
   }
 
 }
