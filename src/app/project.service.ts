@@ -27,5 +27,11 @@ export class ProjectService {
       }
     });
   }
-
+  getProject(id) {
+    return this.http.get(this.Url + 'projects/' + id, {
+      headers: {
+        Authorization: sessionStorage.getItem('token')
+      }
+    });
+  }
 }

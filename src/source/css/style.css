@@ -1716,6 +1716,7 @@ h3 {
 
 /* line 214, ../../Arafath/CL/CL October/217. Real Estate/HTML/scss/_slider.scss */
 .slider_area .single-field.min_width label {
+  margin-top: 10px;  /* eric */
   display: block;
   font-size: 15px;
   color: #FDAE5C;

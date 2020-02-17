@@ -10,7 +10,6 @@
           </div>
           <div class="property_form">
             <form action="#">
-            <ng-container>
               <!--a row-->
               <div class="row">
                 <div class="col-xl-12">
@@ -20,18 +19,17 @@
                       <input type="text" [(ngModel)]="search.programName" name="programName">
                     </div>
                     <div class="single-field min_width " *ngIf="show.partNumber=='SG'">
-                      <label for="#">Part Number</label>
+                      <label for="#">Part Number 1</label>
                       <input type="text" [(ngModel)]="search.partNumber" name="partNumber">
                     </div>
                     <div class="single-field min_width " *ngIf="show.customerNameEN=='SG'">
-                      <label for="#">EN Customer Name</label>
+                      <label for="#">Part Number 2</label>
                       <input>
                     </div>
                     <div class="single-field min_width " *ngIf="show.region=='SG'">
-                      <label for="#">Region</label>
+                      <label for="#">Part Number 3</label>
                       <input>
                     </div>
-
                     <div class="serach_icon"  *ngIf=show.programName>
                       <a  (click)="Search()" routerLinkActive="router-link-active" >
                         <i class="ti-search"></i>
@@ -39,8 +37,31 @@
                     </div>
                   </div>
                 </div>
+              <!-- <ng-container>
+                <div class="col-xl-12">
+                  <div class="form_wrap d-flex">
+                    <div class="single-field min_width " *ngIf="show.programName =='SG'">
+                      <label for="#">Program Name</label>
+                      <input type="text" [(ngModel)]="search.programName" name="programName">
+                    </div>
+                    <div class="single-field min_width " *ngIf="show.partNumber=='SG'">
+                      <label for="#">Part Number 1</label>
+                      <input type="text" [(ngModel)]="search.partNumber" name="partNumber">
+                    </div>
+                    <div class="single-field min_width " *ngIf="show.customerNameEN=='SG'">
+                      <label for="#">Part Number 2</label>
+                      <input>
+                    </div>
+                    <div class="single-field min_width " *ngIf="show.region=='SG'">
+                      <label for="#">Part Number 3</label>
+                      <input>
+                    </div>
+
+                  </div>
+                </div>
+               </ng-container> -->
               </div>
-            </ng-container>
+
 
               <!--end row-->
             </form>

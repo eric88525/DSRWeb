@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectTableComponent } from './project-table/project-table.component';
+import {ProjectDetailsComponent} from './project-details/project-details.component'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProjectTableComponent } from './project-table/project-table.component';
     HeaderComponent,
     SearchComponent,
     LoginComponent,
-    ProjectTableComponent
+    ProjectTableComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,

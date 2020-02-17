@@ -19,12 +19,12 @@
                   </div>
                   <div class="property_content">
                       <div class="main_pro">
-                              <h3><a href="#">{{project.programName}}</a></h3>
+                              <h3><a [routerLink]="['/projects', project.opportunity]">{{project.programName}}</a></h3>
                               <div class="mark_pro">
-                                  <img src="img/svg_icon/location.svg" alt="">
+                                  <img src="img/svg_icon/location.svg" alt="Picture error">
                                   <span>{{project.opportunity}}</span>
                               </div>
-                              <span class="amount">Details</span>
+                              <a [routerLink]="['/projects', project.opportunity]" class="amount"> Details</a>
                       </div>
                   </div>
                   <!-- <div class="footer_pro">

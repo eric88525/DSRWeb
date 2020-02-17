@@ -3,7 +3,7 @@ import { Project } from '../project';
 import { ProjectService } from '../project.service';
 import { MemberService } from '../member.service';
 import { Level } from '../level';
-import { ParseErrorLevel } from '@angular/compiler';
+import { ParseErrorLevel, createOfflineCompileUrlResolver } from '@angular/compiler';
 
 @Component({
   selector: 'app-search',
@@ -13,36 +13,46 @@ import { ParseErrorLevel } from '@angular/compiler';
 export class SearchComponent implements OnInit {
   show = {} as Level;
   search = {} as Project;
-  result = {} as Project[];
-  constructor(private projectService: ProjectService, private memberService: MemberService) { }
+  result = [] as Project[];
 
+  constructor(
+    private projectService: ProjectService,
+    private memberService: MemberService
+  ) {}
   Search() {
     console.log(this.search.programName);
     if (sessionStorage.getItem('token') != null) {
-      this.projectService.searchProjects(this.search).subscribe(
-        (data: Project[]) => this.result = data
-      );
-      console.log(this.result);
+      this.projectService
+        .searchProjects(this.search)
+        .subscribe((data: Project[]) => (this.result = this.reOrder(data)));
     } else {
       alert('You have to login!');
     }
+    console.log(this.result);
   }
-  ngOnInit() {
-    this.search.programName = '';
-    this.search.partNumber = '';
-    this.memberService.whoami().subscribe(
-      (data: any) => {
-        if (data.level) {
-          this.show = data.level;
-          console.log(this.show);
-        } else {
-          console.log('cant get level data');
+
+  reOrder(data: Project[]): Project[] {
+    let temp = [] as  Project[];
+    for (let i = 0; i < data.length; i++) {
+      for (let j = i + 1; j < data.length; j++) {
+        console.log(i,j);
+        if (data[i].opportunity === data[j].opportunity) {
+
+          j = ++i;
         }
       }
-
-    );
-
-
+      temp.push(data[i]);
+    }
+    return temp;
   }
-
+  ngOnInit() {
+    this.memberService.whoami().subscribe((data: any) => {
+      if (data.level) {
+        this.show = data.level;
+        console.log(this.show);
+      } else {
+        console.log('cant get level data');
+      }
+    });
+  }
 }
