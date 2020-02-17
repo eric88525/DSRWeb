@@ -22,14 +22,7 @@
                       <label for="#">Part Number 1</label>
                       <input type="text" [(ngModel)]="search.partNumber" name="partNumber">
                     </div>
-                    <div class="single-field min_width " *ngIf="show.customerNameEN=='SG'">
-                      <label for="#">Part Number 2</label>
-                      <input>
-                    </div>
-                    <div class="single-field min_width " *ngIf="show.region=='SG'">
-                      <label for="#">Part Number 3</label>
-                      <input>
-                    </div>
+
                     <div class="serach_icon"  *ngIf=show.programName>
                       <a  (click)="Search()" routerLinkActive="router-link-active" >
                         <i class="ti-search"></i>

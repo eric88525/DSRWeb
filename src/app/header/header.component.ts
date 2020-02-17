@@ -51,7 +51,8 @@ export class HeaderComponent implements OnInit {
     this.me.email = '';
     this.me.level = '';
     this.memberService.Logout();
-    //location.reload();
+    this.router.navigate(['/home']);
+
   }
 
 }

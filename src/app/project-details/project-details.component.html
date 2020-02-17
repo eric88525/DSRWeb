@@ -1,0 +1,35 @@
+
+<app-header></app-header>
+
+<div class="frame">
+  <img src="http://localhost/images/2898300.jpg">
+</div>
+
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">Date</th>
+              <th class="column2">Order ID</th>
+            </tr>
+          </thead>
+          <tbody>
+
+              <tr *ngFor="let part of partNumbers;index as i" class="row100 body">
+                <td class="column1">Part Numer {{i+1}}</td>
+                <td class="column2">{{part}}</td>
+              </tr>
+              <tr *ngFor="let pj of projects" class="row100 body">
+              <td class="column1">{{pj.item}}</td>
+                <td class="column2">{{pj.value}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

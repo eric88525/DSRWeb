@@ -47,7 +47,7 @@
                               <div class="book_btn d-none d-lg-block" >
 
                                   <a *ngIf=!hasLogin [routerLink]="['/login']">Login</a>
-                                  <a (click)=Logout() *ngIf=hasLogin [routerLink]="['/main']">Logout</a>
+                                  <a (click)=Logout() *ngIf=hasLogin href="">Logout</a>
                               </div>
 
                           </div>

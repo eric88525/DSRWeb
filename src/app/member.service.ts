@@ -35,7 +35,7 @@ export class MemberService {
       }
     });
     sessionStorage.removeItem('token');
-    location.reload();
+
   }
 
 }
