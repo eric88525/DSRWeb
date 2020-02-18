@@ -5,30 +5,93 @@
       <div class="row align-items-center">
         <div class="col-xl-10 offset-xl-1">
           <div class="slider_text text-center justify-content-center">
-            <h3>Find your Project</h3>
+            <h3  *ngIf="show.programName =='SG'" (click)="Search()" class="Search">Search Project</h3>
+            <h3  *ngIf="show.programName !='SG'" (click)="Search()" class="Search">Welcome to MCP</h3>
+            <!-- <div class="serach_icon"  *ngIf=show.programName>
+              <a  (click)="Search()" routerLinkActive="router-link-active" >
+                <i class="ti-search"></i>
+              </a>
+            </div> -->
             <p></p>
           </div>
-          <div class="property_form">
+          <div class="property_form" *ngIf="show.programName =='SG'">
             <form action="#">
               <!--a row-->
+
               <div class="row">
                 <div class="col-xl-12">
-                  <div class="form_wrap d-flex">
-                    <div class="single-field min_width " *ngIf="show.programName =='SG'">
+                  <div class="">
+                    <div class="single-field min_width float" *ngIf="show.programName[0] =='S'">
                       <label for="#">Program Name</label>
                       <input type="text" [(ngModel)]="search.programName" name="programName">
                     </div>
-                    <div class="single-field min_width " *ngIf="show.partNumber=='SG'">
-                      <label for="#">Part Number 1</label>
+                    <div class="single-field min_width float" *ngIf="show.partNumber[0]=='S'">
+                      <label for="#">Part Number</label>
                       <input type="text" [(ngModel)]="search.partNumber" name="partNumber">
                     </div>
-
-                    <div class="serach_icon"  *ngIf=show.programName>
-                      <a  (click)="Search()" routerLinkActive="router-link-active" >
-                        <i class="ti-search"></i>
-                      </a>
+                    <div class="single-field min_width float" *ngIf="show.customerNameEN[0] =='S'">
+                      <label for="#">Customer Name EN</label>
+                      <input type="text" [(ngModel)]="search.customerNameEN" name="customerNameEN">
                     </div>
+                    <div class="single-field min_width float" *ngIf="show.region[0] =='S'">
+                      <label for="#">Region</label>
+                      <input type="text" [(ngModel)]="search.region" name="region">
                   </div>
+                  <div class="single-field min_width float" *ngIf="show.sales[0] =='S'">
+                      <label for="#">Sales</label>
+                      <input type="text" [(ngModel)]="search.sales" name="sales">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.prodLine[0] =='S'">
+                      <label for="#">Product Line</label>
+                      <input type="text" [(ngModel)]="search.prodLine" name="prodLine">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.projectUnits[0] =='S'">
+                      <label for="#">Project Units</label>
+                      <input type="text" [(ngModel)]="search.projectUnits" name="projectUnits">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.qtyBoard[0] =='S'">
+                      <label for="#">Qty Board</label>
+                      <input type="text" [(ngModel)]="search.qtyBoard" name="qtyBoard">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.asp[0] =='S'">
+                      <label for="#">Asp</label>
+                      <input type="text" [(ngModel)]="search.asp" name="asp">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.amount[0] =='S'">
+                      <label for="#">Amount</label>
+                      <input type="text" [(ngModel)]="search.amount" name="amount">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.confidencePercent[0] =='S'">
+                      <label for="#">Confidence Percent</label>
+                      <input type="text" [(ngModel)]="search.confidencePercent" name="confidencePercent">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.productionDate[0] =='S'">
+                      <label for="#">Production Date</label>
+                      <input type="text" [(ngModel)]="search.productionDate" name="productionDate">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.supportNeeded[0] =='S'">
+                      <label for="#">Support Needed</label>
+                      <input type="text" [(ngModel)]="search.supportNeeded" name="supportNeeded">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.update[0] =='S'">
+                      <label for="#">Update</label>
+                      <input type="text" [(ngModel)]="search.update" name="update">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.top10[0] =='S'">
+                      <label for="#">Top10(Y/N)</label>
+                      <input type="text" [(ngModel)]="search.top10" name="top10">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.opportunity[0] =='S'">
+                      <label for="#">Opportunity</label>
+                      <input type="text" [(ngModel)]="search.opportunity" name="opportunity">
+                  </div>
+                  <div class="single-field min_width float" *ngIf="show.createdDate[0] =='S'">
+                      <label for="#">CreatedDate</label>
+                      <input type="text" [(ngModel)]="search.createdDate" name="createdDate">
+                  </div>
+
+                  </div>
+
                 </div>
               <!-- <ng-container>
                 <div class="col-xl-12">

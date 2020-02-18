@@ -1,8 +1,11 @@
+.bgc{
+  background-color: #667787;
+}
+
 .frame {
-  height: 750px; /*can be anything*/
-  width: 30%; /*can be anything*/
+  height: 700px; /*can be anything*/
+  width: 100%; /*can be anything*/
   position: relative;
-  background-color: #ffffff;
 }
 img {
   max-height: 100%;
@@ -10,7 +13,8 @@ img {
   width: auto;
   height: auto;
   position: absolute;
-  top: 0;
+  margin-top: 200px;
+  top: 100px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -124,13 +128,11 @@ iframe {
 
 .container-table100 {
   width: 100%;
-  min-height: 100vh;
-  background: #c850c0;
-  background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+  /* min-height: 40vh; */
+  /*background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
   background: -o-linear-gradient(45deg, #4158d0, #c850c0);
   background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
-  background: linear-gradient(45deg, #4158d0, #c850c0);
-
+  background: linear-gradient(45deg, #4158d0, #c850c0);*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -142,8 +144,9 @@ iframe {
   padding: 33px 30px;
 }
 
+/*width of table*/
 .wrap-table100 {
-  width: 1170px;
+  width: 900px;
 }
 
 table {
@@ -215,10 +218,14 @@ tbody tr:hover {
 .column1 {
   width: 260px;
   padding-left: 40px;
+  font-family: sans-serif;
+  font-size: 18px;
 }
 
 .column2 {
   width: 160px;
+  font-family: sans-serif;
+  font-size: 18px;
 }
 
 .column3 {

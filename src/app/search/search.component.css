@@ -1,0 +1,14 @@
+
+.slider_area .single_slider .slider_text h3:hover {
+  font-family: "Poppins", sans-serif;
+  font-size: 73px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 70px;
+  margin-bottom: 15px;
+  color: rgb(246, 187, 22);
+}
+.float{
+  float: left;
+}

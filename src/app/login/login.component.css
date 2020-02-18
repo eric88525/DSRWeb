@@ -8,3 +8,6 @@
 @import "./loginsource/vendor/daterangepicker/daterangepicker.css";
 @import "./loginsource/css/util.css";
 @import "./loginsource/css/main.css";
+.bgc{
+background-color: #667787;
+}
