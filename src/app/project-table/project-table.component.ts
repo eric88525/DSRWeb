@@ -18,6 +18,7 @@ export class ProjectTableComponent implements OnInit {
     window.open(url, '_blank');
   }
   ngOnInit() {
+
     this.itemPerPage = 6;
   }
 }

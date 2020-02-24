@@ -1,3 +1,4 @@
+
 <div class="popular_property">
   <div class="container">
       <div class="row">
@@ -15,15 +16,15 @@
                       <!-- <div class="property_tag">
                               For Sale
                       </div> -->
-                      <img src="http://ccnet.myasustor.com:8200/MCP/public/projectImages/2898300.jpg" alt="Image not exist">
+                      <img src="http://ccnet.myasustor.com:8200/MCP/public/projectImages/{{project.opportunity}}.jpg" alt="Image not exist">
                   </div>
                   <div class="property_content">
                       <div class="main_pro">
-                              <h3><a [routerLink]="['/projects', project.opportunity]" target="_blank">{{project.programName}}</a></h3>
+                              <h3><a [routerLink]="['/projects', project.opportunity]" >{{project.programName}}</a></h3>
                               <div class="mark_pro">
                                   <span>{{project.opportunity}}</span>
                               </div>
-                              <a [routerLink]="['/projects', project.opportunity]" target="_blank" class="amount"> Details</a>
+                              <a [routerLink]="['/projects', project.opportunity]"  class="amount"> Details</a>
 
                       </div>
                   </div>

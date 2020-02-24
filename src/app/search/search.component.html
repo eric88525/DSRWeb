@@ -7,7 +7,7 @@
           <div class="slider_text text-center justify-content-center">
           <ng-container *ngIf="show.programName=='SG' ">
 
-              <a href="javascript:void(0)"><h3   (click)="Search()" class="Search">Search</h3></a>
+              <a href="javascript:void()"><h3   (click)="Search()" class="Search">Search</h3></a>
 
 
           </ng-container>
@@ -137,5 +137,5 @@
 </div>
 <!-- slider_area_end -->
 <ng-container *ngIf="result.length">
-<app-project-table [projects]=result></app-project-table>
+<app-project-table [projects]=result></app-project-table>>
 </ng-container>

@@ -27,11 +27,15 @@ export class SearchComponent implements OnInit {
     this.result = [] as Project[];
     console.log(this.search.programName);
     if (sessionStorage.getItem("token") != null) {
+      sessionStorage.setItem('Search', JSON.stringify(this.search));
       this.projectService.searchProjects(this.search).subscribe(
         (data: any) => {
         if (!data.error) {
           this.result = this.reOrder(data);
+          sessionStorage.removeItem('Result');
+          sessionStorage.setItem('Result', JSON.stringify(this.result));
           alert('Got ' + this.result.length + ' result');
+
         } else {
           alert(data.error);
         }
@@ -56,6 +60,12 @@ export class SearchComponent implements OnInit {
     return temp;
   }
   ngOnInit() {
+    if(sessionStorage.getItem('Search')){
+      this.search = JSON.parse(sessionStorage.getItem('Search'));
+    }
+    if(sessionStorage.getItem('Result')){
+      this.result = JSON.parse(sessionStorage.getItem('Result'));
+    }
     this.memberService.whoami().subscribe((data: any) => {
       if (data.level) {
         this.show = data.level;

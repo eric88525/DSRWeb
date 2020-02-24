@@ -8,6 +8,7 @@ import { Project } from '../project';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
+  opportunity;
   project: Project;
   partNumbers = [];
   items = [];
@@ -82,6 +83,7 @@ export class ProjectDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(data => {
       const id = data.projectId;
+      this.opportunity = id;
       this.projectService.getProject(id).subscribe((result: any) => {
         if (result.error) {
           alert('Project not exist!');
