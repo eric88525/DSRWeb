@@ -17,12 +17,13 @@ export class SearchComponent implements OnInit {
   show = {} as Level;
   search = {} as Project;
   result = [] as Project[];
-
+  searching: boolean;
   constructor(
     private projectService: ProjectService,
     private memberService: MemberService
   ) {}
   Search() {
+    this.searching = true;
     this.result = [] as Project[];
     console.log(this.search.programName);
     if (sessionStorage.getItem("token") != null) {
@@ -30,6 +31,7 @@ export class SearchComponent implements OnInit {
         (data: any) => {
         if (!data.error) {
           this.result = this.reOrder(data);
+          alert('Got ' + this.result.length + ' result');
         } else {
           alert(data.error);
         }
@@ -38,6 +40,7 @@ export class SearchComponent implements OnInit {
       alert("You have to login!");
     }
     console.log(this.result);
+    this.searching = false;
   }
 
   reOrder(data: Project[]): Project[] {

@@ -5,8 +5,16 @@
       <div class="row align-items-center">
         <div class="col-xl-10 offset-xl-1">
           <div class="slider_text text-center justify-content-center">
-            <h3  *ngIf="show.programName =='SG'" (click)="Search()" class="Search">Search</h3>
-            <h3  *ngIf="show.programName !='SG'" (click)="Search()" class="Search">Welcome to MCP</h3>
+          <ng-container *ngIf="show.programName=='SG' ">
+
+              <a href="javascript:void(0)"><h3   (click)="Search()" class="Search">Search</h3></a>
+
+
+          </ng-container>
+
+          <ng-container  *ngIf="show.programName !='SG' ">
+            <h3  (click)="Search()" class="Search">Welcome to DSR</h3>
+          </ng-container>
             <!-- <div class="serach_icon"  *ngIf=show.programName>
               <a  (click)="Search()" routerLinkActive="router-link-active" >
                 <i class="ti-search"></i>

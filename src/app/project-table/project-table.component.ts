@@ -13,6 +13,10 @@ export class ProjectTableComponent implements OnInit {
   loadMorePage() {
     this.itemPerPage += 6;
   }
+  go(id){
+    let url = 'http://localhost:4200/projects/'+id;
+    window.open(url, '_blank');
+  }
   ngOnInit() {
     this.itemPerPage = 6;
   }

@@ -1,7 +1,7 @@
 
-<app-header></app-header>
+
 <div class="frame bgc">
-  <img src="http://127.0.0.1/views/assets/pjImage/2898300.jpg">
+  <img src="http://ccnet.myasustor.com:8200/MCP/public/projectImages/2898300.jpg">
 
 </div>
 
@@ -15,17 +15,20 @@
             <tr class="table100-head">
               <th class="column1">Date</th>
               <th class="column2">Order ID</th>
+              <th class="column2">ASP</th>
             </tr>
           </thead>
           <tbody>
 
               <tr *ngFor="let part of partNumbers;index as i" class="row100 body">
                 <td class="column1">Part Numer {{i+1}}</td>
-                <td class="column2">{{part}}</td>
+                <td class="column2">{{part.partNumber}}</td>
+                <td class="column2">{{part.asp}}</td>
               </tr>
               <tr *ngFor="let pj of projects" class="row100 body">
-              <td class="column1">{{pj.item}}</td>
+                <td class="column1">{{pj.item}}</td>
                 <td class="column2">{{pj.value}}</td>
+
               </tr>
           </tbody>
         </table>

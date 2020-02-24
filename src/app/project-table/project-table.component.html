@@ -15,15 +15,16 @@
                       <!-- <div class="property_tag">
                               For Sale
                       </div> -->
-                      <img src="http://127.0.0.1/views/assets/pjImage/2898300.jpg" alt="">
+                      <img src="http://ccnet.myasustor.com:8200/MCP/public/projectImages/2898300.jpg" alt="Image not exist">
                   </div>
                   <div class="property_content">
                       <div class="main_pro">
-                              <h3><a [routerLink]="['/projects', project.opportunity]">{{project.programName}}</a></h3>
+                              <h3><a [routerLink]="['/projects', project.opportunity]" target="_blank">{{project.programName}}</a></h3>
                               <div class="mark_pro">
                                   <span>{{project.opportunity}}</span>
                               </div>
-                              <a [routerLink]="['/projects', project.opportunity]" class="amount"> Details</a>
+                              <a [routerLink]="['/projects', project.opportunity]" target="_blank" class="amount"> Details</a>
+
                       </div>
                   </div>
                   <!-- <div class="footer_pro">

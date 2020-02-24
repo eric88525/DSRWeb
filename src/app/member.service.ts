@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Member } from './member';
 import {HttpHeaders} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,16 +12,16 @@ export class MemberService {
   };
   constructor(private httpClient: HttpClient) {
   }
-  Url = 'http://127.0.0.1/api/Auth/';
+
   valid: boolean;
 
   Login(user) {
-    return this.httpClient.post(this.Url + 'login', user);
+    return this.httpClient.post(environment.api + 'Auth/login', user);
   }
   whoami() {
     console.log('who am i');
     console.log(sessionStorage.getItem('token'));
-    return this.httpClient.get(this.Url + 'me', {
+    return this.httpClient.get(environment.api + 'Auth/me', {
       headers: {
         Authorization: sessionStorage.getItem('token')
       }
@@ -29,7 +30,7 @@ export class MemberService {
   Logout() {
     console.log('logout:');
     console.log(sessionStorage.getItem('token'));
-    this.httpClient.get(this.Url + 'logout', {
+    this.httpClient.get(environment.api + 'Auth/logout', {
       headers: {
         Authorization: sessionStorage.getItem('token')
       }

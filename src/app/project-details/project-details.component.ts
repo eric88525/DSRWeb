@@ -9,7 +9,7 @@ import { Project } from '../project';
 })
 export class ProjectDetailsComponent implements OnInit {
   project: Project;
-  partNumbers = [] as string[];
+  partNumbers = [];
   items = [];
   values = [];
   projects = [];
