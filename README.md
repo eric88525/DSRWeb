@@ -1,3 +1,10 @@
+# DSR前端網站
++ 登入系統
++ 搜尋系統
++ 前後端分離
+# 一些BUILD指令
++ ng build --prod --build-optimizer --base-href http://ccnet.myasustor.com:8200/MCP/public/views/
+
 # Front
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
