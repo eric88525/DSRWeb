@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
   Search() {
     this.searching = true;
     this.result = [] as Project[];
-    console.log(this.search.programName);
+    //console.log(this.search.programName);
     if (sessionStorage.getItem("token") != null) {
       sessionStorage.setItem('Search', JSON.stringify(this.search));
       this.projectService.searchProjects(this.search).subscribe(
@@ -43,7 +43,7 @@ export class SearchComponent implements OnInit {
     } else {
       alert("You have to login!");
     }
-    console.log(this.result);
+   // console.log(this.result);
     this.searching = false;
   }
 
@@ -71,7 +71,7 @@ export class SearchComponent implements OnInit {
         this.show = data.level;
         console.log(this.show);
       } else {
-        console.log("cant get level data");
+       // console.log("cant get level data");
       }
     });
   }

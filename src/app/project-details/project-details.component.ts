@@ -18,10 +18,13 @@ export class ProjectDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private projectService: ProjectService,
     private router: Router
-  ) { }
+  ) {}
 
   nameMap(name) {
     switch (name) {
+      case 'no':
+        return 'No';
+
       case 'customerNameCN':
         return '客戶名稱(CN)';
 
@@ -43,38 +46,47 @@ export class ProjectDetailsComponent implements OnInit {
       case 'partNumber':
         return 'partNumber';
 
-      case 'projectUnits':
-        return 'projectUnits';
+      case 'epsomnNote':
+        return 'Epsomn Note';
 
-      case 'qtyBoard':
-        return 'qtyBoard';
+      case 'qty':
+        return 'Qty';
 
-      case 'asp':
-        return 'asp';
+      case 'pcsBoard':
+        return 'Pcs Board';
+
+      case 'unitPrice':
+        return 'unitPrice';
 
       case 'amount':
         return 'amount';
 
-      case 'confidencePercent':
-        return 'confidencePercent';
+      case 'dwStatus':
+        return 'dwStatus';
+
+      case 'remark':
+        return 'remark';
+
+      case 'renewDay':
+        return 'renewDay';
 
       case 'productionDate':
         return 'productionDate';
 
-      case 'supportNeeded':
-        return 'supportNeeded';
+      case 'createDate':
+        return 'createDate';
 
-      case 'update':
-        return 'update';
+      case 'industrySegment':
+        return 'industrySegment';
 
       case 'top10':
         return 'top10';
 
-      case 'opportunity':
-        return 'opportunity';
+      case 'regLineStatus':
+        return 'regLineStatus';
+      case 'note':
+        return 'note';
 
-      case 'createdDate':
-        return 'createdDate';
       default:
         break;
     }
@@ -94,12 +106,10 @@ export class ProjectDetailsComponent implements OnInit {
             this.items = Object.keys(this.project);
             this.values = Object.values(this.project);
             for (let i = 0; i < this.items.length; i++) {
-              this.projects.push(
-                {
-                  item: this.nameMap(this.items[i]),
-                  value: this.values[i]
-                }
-              );
+              this.projects.push({
+                item: this.nameMap(this.items[i]),
+                value: this.values[i]
+              });
             }
           }
           if (result.partNumbers) {

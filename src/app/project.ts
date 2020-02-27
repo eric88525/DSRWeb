@@ -1,21 +1,26 @@
 export interface Project {
-  customerNameCN: string ;
+  no: string;
+  customerNameCN: string;
   customerNameEN: string;
   region: string;
   sales: string;
-  programName: string;
   prodLine: string;
-  partNumber: string;
-  projectUnits: string;
-  qtyBoard: string;
-  asp: string;
-  amount: string;
-  confidencePercent: string;
-  productionDate: string;
-  supportNeeded: string;
-  update: string;
-  top10: string;
+  programName: string;
   opportunity: string;
-  createdDate: string;
+  partNumber: string;
+  epsomnNote: string;
+  qty: string;
+  pcsBoard: string;
+  unitPrice: string;
+  amount: string;
+  dwStatus: string;
+  remark: string;
+  renewDay: string;
+  productionDate: string;
+  createDate: string;
+  industrySegment: string;
+  top10: string;
+  regLineStatus: string;
+  note: string;
 }
 

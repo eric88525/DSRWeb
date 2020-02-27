@@ -18,24 +18,24 @@ export class HeaderComponent implements OnInit {
   constructor(private memberService: MemberService, private router: Router) { }
   ngOnInit() {
 
-    console.log('header on ini');
+   // console.log('header on ini');
     this.memberService.whoami().subscribe(
       (data: any) => {
-        console.log(data);
+       // console.log(data);
         if (data.user) {
           this.hasLogin = true;
           this.me.name = data.user.name;
           this.me.email = data.user.namemaile;
           this.me.level = data.user.level;
-          console.log('data good');
+         // console.log('data good');
         } else if (data.error) {
           this.hasLogin = false;
-          console.log('data error');
+         // console.log('data error');
         }
       }
     );
-    console.log(this.me);
-    console.log(this.hasLogin);
+   // console.log(this.me);
+   // console.log(this.hasLogin);
   }
   Refresh() {
     this.hasLogin = false;
@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
     this.me.email = '';
     this.me.level = '';
     this.memberService.Logout();
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
 
   }
 

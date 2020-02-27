@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('token', data.token);
         this.router.navigate(['/']);
       } else {
-        console.log('fail');
+      //  console.log('fail');
       }
     }, (response) => {
       alert('登入失敗');

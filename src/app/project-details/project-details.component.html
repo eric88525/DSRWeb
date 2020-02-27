@@ -1,4 +1,4 @@
-
+<app-header></app-header>
 
 <div class="frame bgc">
   <img src="http://ccnet.myasustor.com:8200/MCP/public/projectImages/{{opportunity}}.jpg" alt="Image not exist">
@@ -24,7 +24,7 @@
               <tr *ngFor="let part of partNumbers;index as i" class="row100 body">
                 <td class="column1">Part Numer {{i+1}}</td>
                 <td class="column2">{{part.partNumber}}</td>
-                <td class="column2">{{part.asp}}</td>
+                <td class="column2">{{part.unitPrice}}</td>
               </tr>
               <tr *ngFor="let pj of projects" class="row100 body">
                 <td class="column1">{{pj.item}}</td>

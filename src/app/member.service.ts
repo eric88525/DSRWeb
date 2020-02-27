@@ -19,8 +19,8 @@ export class MemberService {
     return this.httpClient.post(environment.api + 'Auth/login', user);
   }
   whoami() {
-    console.log('who am i');
-    console.log(sessionStorage.getItem('token'));
+   // console.log('who am i');
+   // console.log(sessionStorage.getItem('token'));
     return this.httpClient.get(environment.api + 'Auth/me', {
       headers: {
         Authorization: sessionStorage.getItem('token')
@@ -28,14 +28,16 @@ export class MemberService {
     });
   }
   Logout() {
-    console.log('logout:');
-    console.log(sessionStorage.getItem('token'));
+    //console.log('logout:');
+   // console.log(sessionStorage.getItem('token'));
     this.httpClient.get(environment.api + 'Auth/logout', {
       headers: {
         Authorization: sessionStorage.getItem('token')
       }
     });
     sessionStorage.removeItem('token');
+    sessionStorage.removeItem('Result');
+    sessionStorage.removeItem('Search');
 
   }
 

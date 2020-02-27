@@ -14,7 +14,7 @@ export class ProjectService {
   constructor(private http: HttpClient) { }
 
   getProjects() {
-    console.log('get pjs');
+   // console.log('get pjs');
     return this.http.get(environment.api + 'projects', {
       headers: {
         Authorization: sessionStorage.getItem('token')

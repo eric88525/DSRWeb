@@ -5,16 +5,18 @@
       <div class="row align-items-center">
         <div class="col-xl-10 offset-xl-1">
           <div class="slider_text text-center justify-content-center">
-          <ng-container *ngIf="show.programName=='SG' ">
+            <ng-container *ngIf="show.programName=='SG' ">
 
-              <a href="javascript:void()"><h3   (click)="Search()" class="Search">Search</h3></a>
+              <a href="javascript:void()">
+                <h3 (click)="Search()" class="Search">Search</h3>
+              </a>
 
 
-          </ng-container>
+            </ng-container>
 
-          <ng-container  *ngIf="show.programName !='SG' ">
-            <h3  (click)="Search()" class="Search">Welcome to DSR</h3>
-          </ng-container>
+            <ng-container *ngIf="show.programName !='SG' ">
+              <h3 (click)="Search()" class="Search">Welcome to DSR</h3>
+            </ng-container>
             <!-- <div class="serach_icon"  *ngIf=show.programName>
               <a  (click)="Search()" routerLinkActive="router-link-active" >
                 <i class="ti-search"></i>
@@ -44,64 +46,57 @@
                     <div class="single-field min_width float" *ngIf="show.region[0] =='S'">
                       <label for="#">Region</label>
                       <input type="text" [(ngModel)]="search.region" name="region">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.sales[0] =='S'">
+                    </div>
+                    <div class="single-field min_width float" *ngIf="show.sales[0] =='S'">
                       <label for="#">Sales</label>
                       <input type="text" [(ngModel)]="search.sales" name="sales">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.prodLine[0] =='S'">
+                    </div>
+                    <div class="single-field min_width float" *ngIf="show.prodLine[0] =='S'">
                       <label for="#">Product Line</label>
                       <input type="text" [(ngModel)]="search.prodLine" name="prodLine">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.projectUnits[0] =='S'">
-                      <label for="#">Project Units</label>
-                      <input type="text" [(ngModel)]="search.projectUnits" name="projectUnits">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.qtyBoard[0] =='S'">
-                      <label for="#">Qty Board</label>
-                      <input type="text" [(ngModel)]="search.qtyBoard" name="qtyBoard">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.asp[0] =='S'">
-                      <label for="#">Asp</label>
-                      <input type="text" [(ngModel)]="search.asp" name="asp">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.amount[0] =='S'">
-                      <label for="#">Amount</label>
-                      <input type="text" [(ngModel)]="search.amount" name="amount">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.confidencePercent[0] =='S'">
-                      <label for="#">Confidence Percent</label>
-                      <input type="text" [(ngModel)]="search.confidencePercent" name="confidencePercent">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.productionDate[0] =='S'">
+                    </div>
+                    <div class="single-field min_width float" *ngIf="show.productionDate[0] =='S'">
                       <label for="#">Production Date</label>
                       <input type="text" [(ngModel)]="search.productionDate" name="productionDate">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.supportNeeded[0] =='S'">
-                      <label for="#">Support Needed</label>
-                      <input type="text" [(ngModel)]="search.supportNeeded" name="supportNeeded">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.update[0] =='S'">
-                      <label for="#">Update</label>
-                      <input type="text" [(ngModel)]="search.update" name="update">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.top10[0] =='S'">
+                    </div>
+                    <div class="single-field min_width float" *ngIf="show.top10[0] =='S'">
                       <label for="#">Top10(Y/N)</label>
                       <input type="text" [(ngModel)]="search.top10" name="top10">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.opportunity[0] =='S'">
+                    </div>
+                    <div class="single-field min_width float" *ngIf="show.opportunity[0] =='S'">
                       <label for="#">Opportunity</label>
                       <input type="text" [(ngModel)]="search.opportunity" name="opportunity">
-                  </div>
-                  <div class="single-field min_width float" *ngIf="show.createdDate[0] =='S'">
-                      <label for="#">CreatedDate</label>
-                      <input type="text" [(ngModel)]="search.createdDate" name="createdDate">
-                  </div>
+                    </div>
+                    <div class="single-field min_width float" *ngIf="show.epsomnNote[0] =='S'">
+                      <label for="#">epsomnNote</label>
+                      <input type="text" [(ngModel)]="search.epsomnNote" name="epsomnNote">
+                   </div>
+                    <div class="single-field min_width float" *ngIf="show.qty[0] =='S'">
+                      <label for="#">qty</label>
+                      <input type="text" [(ngModel)]="search.qty" name="qty">
+                   </div>
+                    <div class="single-field min_width float" *ngIf="show.renewDay[0] =='S'">
+                      <label for="#">renewDay</label>
+                      <input type="text" [(ngModel)]="search.renewDay" name="renewDay">
+                   </div>
+                    <div class="single-field min_width float" *ngIf="show.industrySegment[0] =='S'">
+                      <label for="#">industrySegment</label>
+                      <input type="text" [(ngModel)]="search.industrySegment" name="industrySegment">
+                   </div>
+                    <div class="single-field min_width float" *ngIf="show.note[0] =='S'">
+                      <label for="#">note</label>
+                      <input type="text" [(ngModel)]="search.note" name="note">
+                   </div>
+
+
+
+
+
 
                   </div>
 
                 </div>
-              <!-- <ng-container>
+                <!-- <ng-container>
                 <div class="col-xl-12">
                   <div class="form_wrap d-flex">
                     <div class="single-field min_width " *ngIf="show.programName =='SG'">
@@ -137,5 +132,5 @@
 </div>
 <!-- slider_area_end -->
 <ng-container *ngIf="result.length">
-<app-project-table [projects]=result></app-project-table>>
+  <app-project-table [projects]=result></app-project-table>>
 </ng-container>
