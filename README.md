@@ -5,6 +5,12 @@
 # 一些BUILD指令
 + ng build --prod --build-optimizer --base-href http://ccnet.myasustor.com:8200/MCP/public/views/
 
+# RESULT
+![](https://i.imgur.com/vt42w7z.png)
+![](https://i.imgur.com/WJNw8Vw.png)
+![](https://i.imgur.com/v4gjEe8.jpg)
+![](https://i.imgur.com/zjv9VDa.png)
+![](https://i.imgur.com/5Q8tnnO.png)
 # Front
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
