@@ -1,16 +1,28 @@
-# DSR前端網站
-+ 登入系統
-+ 搜尋系統
-+ 前後端分離
-# 一些BUILD指令
-+ ng build --prod --build-optimizer --base-href http://ccnet.myasustor.com:8200/MCP/public/views/
+# DSR Frontend
++ user login and set level
++ search system
 
-# RESULT
-![](https://i.imgur.com/vt42w7z.png)
-![](https://i.imgur.com/WJNw8Vw.png)
-![](https://i.imgur.com/v4gjEe8.jpg)
-![](https://i.imgur.com/zjv9VDa.png)
-![](https://i.imgur.com/5Q8tnnO.png)
+# Demo
+## Home
+![](/demo/home.png)
+
+## Login
+![](/demo/login.png)
+
+## Search
+![](/demo/search.png)
+
+## Search result
+![](/demo/result.png)
+
+
+## Project details
+![](/demo/project_detail.png)
+# build command
+```
+ng build --prod --build-optimizer --base-href {base url}
+```
+
 # Front
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
